@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+            <a href="{{ url_for('index') }}">🏠 Home</a>
+            <a href="{{ url_for('appointments') }}">📅 Appointments</a>
+            <a href="{{ url_for('patients') }}">👥 Patients</a>
+            <a href="{{ url_for('doctors') }}">👨‍⚕️ Doctors</a>
+        </div>
+
+        <div class="form-container">
+
+            <h2>📅 Book Appointment</h2>
+
+            <form method="POST">
+
+                <div class="form-group">
+                    <label>Patient Name</label>
+
+                    <input type="text"
+                           name="patient"
+                           placeholder="Enter patient name"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Doctor Name</label>
+
+                    <input type="text"
+                           name="doctor"
+                           placeholder="Enter doctor name"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Appointment Date</label>
+
+                    <input type="date"
+                           name="date"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Appointment Time</label>
+
+                    <input type="time"
+                           name="time"
+                           required>
+                </div>
+
+                <button type="submit" class="btn">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🏥 Hospital Management System</h1>
+            <p>Manage patients, doctors and appointments</p>
+        </header>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <div class="icon">👨‍⚕️</div>
+                <h2>Doctors</h2>
+                <p>Manage hospital doctors and their details.</p>
+
+                <a href="{{ url_for('doctors') }}">
+                    View Doctors
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🧑‍🤝‍🧑</div>
+                <h2>Patients</h2>
+                <p>Add, edit, delete and view patient details.</p>
+
+                <a href="{{ url_for('patients') }}">
+                    View Patients
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📅</div>
+                <h2>Appointments</h2>
+                <p>Book and manage patient appointments.</p>
+
+                <a href="{{ url_for('appointments') }}">
+                    View Appointments
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
